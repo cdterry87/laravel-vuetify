@@ -28,10 +28,10 @@ Vue.filter('truncate', function (string, length) {
 
 //Primary components
 import App from './components/App'
-import Login from './auth/Login'
-import Register from './auth/Register'
-import Email from './auth/passwords/Email'
-import Reset from './auth/passwords/Reset'
+import Login from './components/auth/Login'
+import Register from './components/auth/Register'
+import Email from './components/auth/passwords/Email'
+import Reset from './components/auth/passwords/Reset'
 
 // App declaration
 const app = new Vue({
