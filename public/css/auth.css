@@ -4,11 +4,13 @@ html, body {
     font-weight: 200;
     height: 100vh;
     margin: 0;
+}
 
-    background: rgb(114,213,196);
-    background: -moz-linear-gradient(15deg, rgba(114,213,196,1) 0%, rgba(7,151,223,1) 62%);
-    background: -webkit-linear-gradient(15deg, rgba(114,213,196,1) 0%, rgba(7,151,223,1) 62%);
-    background: linear-gradient(15deg, rgba(114,213,196,1) 0%, rgba(7,151,223,1) 62%);
+body .application {
+    background: rgb(114,213,196) !important;
+    background: -moz-linear-gradient(15deg, rgba(114,213,196,1) 0%, rgba(7,151,223,1) 62%) !important;
+    background: -webkit-linear-gradient(15deg, rgba(114,213,196,1) 0%, rgba(7,151,223,1) 62%) !important;
+    background: linear-gradient(15deg, rgb(114,213,196) 0%, rgba(7,151,223,1) 62%) !important;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#72d5c4",endColorstr="#0797df",GradientType=1);
 }
 
