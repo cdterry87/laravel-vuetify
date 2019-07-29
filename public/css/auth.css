@@ -14,6 +14,10 @@ body .application, body #welcome {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#72d5c4",endColorstr="#0797df",GradientType=1);
 }
 
+.v-alert {
+    margin: 0 !important;
+}
+
 #welcome {
     height: 100vh;
     align-items: center;
