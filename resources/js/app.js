@@ -28,6 +28,7 @@ Vue.filter('truncate', function (string, length) {
 
 //Primary components
 import App from './components/App'
+import Errors from './components/Errors'
 import Login from './components/auth/Login'
 import Register from './components/auth/Register'
 import Email from './components/auth/passwords/Email'
@@ -38,6 +39,7 @@ const app = new Vue({
     el: '#app',
     components: {
         App,
+        Errors,
         Login,
         Register,
         Email,

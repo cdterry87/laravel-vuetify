@@ -30,6 +30,6 @@
 
 <script>
     export default {
-        name: 'Email'
+        name: 'Email',
     }
 </script>

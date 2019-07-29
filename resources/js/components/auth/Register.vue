@@ -35,6 +35,6 @@
 
 <script>
     export default {
-        name: 'Login'
+        name: 'Register',
     }
 </script>

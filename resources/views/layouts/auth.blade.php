@@ -16,6 +16,9 @@
     <body>
         <div id="app">
             <main>
+                @if($errors->any())
+                    <errors :errors="'{{ json_encode($errors->all()) }}'"></errors>
+                @endif
                 @yield('content')
             </main>
         </div>

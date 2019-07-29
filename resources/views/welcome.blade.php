@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @section('content')
-    <div id="home">
+    <div id="welcome">
         <div class="content">
             <div class="title m-b-md">
                 Title
