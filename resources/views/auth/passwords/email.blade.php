@@ -3,6 +3,6 @@
 @section('content')
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
-        <email></email>
+        <email :title="'{{ config('app.name') }}'"></email>
     </form>
 @endsection

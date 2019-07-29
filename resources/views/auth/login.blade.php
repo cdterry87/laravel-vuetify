@@ -3,6 +3,6 @@
 @section('content')
     <form method="POST" action="{{ route('login') }}">
         @csrf
-        <login></login>
+        <login :title="'{{ config('app.name') }}'"></login>
     </form>
 @endsection

@@ -1936,7 +1936,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Login'
+  name: 'Login',
+  props: ['title', 'message'],
+  mounted: function mounted() {
+    console.log('message', this.message);
+  }
 });
 
 /***/ }),
@@ -1986,7 +1990,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Register'
+  name: 'Register',
+  props: ['title']
 });
 
 /***/ }),
@@ -2031,7 +2036,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Email'
+  name: 'Email',
+  props: ['title']
 });
 
 /***/ }),
@@ -2079,7 +2085,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Reset'
+  name: 'Reset',
+  props: ['title']
 });
 
 /***/ }),
@@ -19744,7 +19751,7 @@ var render = function() {
                     [
                       _c("div", { staticClass: "text-xs-center mb-3" }, [
                         _c("h1", { staticClass: "display-1" }, [
-                          _vm._v("Title")
+                          _vm._v(_vm._s(_vm.title))
                         ]),
                         _vm._v(" "),
                         _c("h2", { staticClass: "subheading mt-2" }, [
@@ -19840,7 +19847,11 @@ var render = function() {
                                     { staticClass: "mt-4 text-xs-center" },
                                     [
                                       _vm._v(
-                                        "\n                                    © Title 2019\n                                "
+                                        "\n                                    © " +
+                                          _vm._s(_vm.title) +
+                                          " " +
+                                          _vm._s(new Date().getFullYear()) +
+                                          "\n                                "
                                       )
                                     ]
                                   )
@@ -19914,7 +19925,7 @@ var render = function() {
                     [
                       _c("div", { staticClass: "text-xs-center mb-3" }, [
                         _c("h1", { staticClass: "display-1" }, [
-                          _vm._v("Title")
+                          _vm._v(_vm._s(_vm.title))
                         ]),
                         _vm._v(" "),
                         _c("h2", { staticClass: "subheading mt-2" }, [
@@ -20010,7 +20021,11 @@ var render = function() {
                                     { staticClass: "mt-4 text-xs-center" },
                                     [
                                       _vm._v(
-                                        "\n                                    © Title 2019\n                                "
+                                        "\n                                    © " +
+                                          _vm._s(_vm.title) +
+                                          " " +
+                                          _vm._s(new Date().getFullYear()) +
+                                          "\n                                "
                                       )
                                     ]
                                   )
@@ -20078,7 +20093,9 @@ var render = function() {
                 { attrs: { xs12: "", sm10: "", md5: "" } },
                 [
                   _c("div", { staticClass: "text-xs-center mb-3" }, [
-                    _c("h1", { staticClass: "display-1" }, [_vm._v("Title")]),
+                    _c("h1", { staticClass: "display-1" }, [
+                      _vm._v(_vm._s(_vm.title))
+                    ]),
                     _vm._v(" "),
                     _c("h2", { staticClass: "subheading mt-2" }, [
                       _vm._v(
@@ -20134,7 +20151,11 @@ var render = function() {
                                 { staticClass: "mt-4 text-xs-center" },
                                 [
                                   _vm._v(
-                                    "\n                                © Title 2019\n                            "
+                                    "\n                                © " +
+                                      _vm._s(_vm.title) +
+                                      " " +
+                                      _vm._s(new Date().getFullYear()) +
+                                      "\n                            "
                                   )
                                 ]
                               )
@@ -20205,7 +20226,7 @@ var render = function() {
                     [
                       _c("div", { staticClass: "text-xs-center mb-3" }, [
                         _c("h1", { staticClass: "display-1" }, [
-                          _vm._v("Title")
+                          _vm._v(_vm._s(_vm.title))
                         ]),
                         _vm._v(" "),
                         _c("h2", { staticClass: "subheading mt-2" }, [
@@ -20273,7 +20294,11 @@ var render = function() {
                                     { staticClass: "mt-4 text-xs-center" },
                                     [
                                       _vm._v(
-                                        "\n                                    © Title 2019\n                                "
+                                        "\n                                    © " +
+                                          _vm._s(_vm.title) +
+                                          " " +
+                                          _vm._s(new Date().getFullYear()) +
+                                          "\n                                "
                                       )
                                     ]
                                   )

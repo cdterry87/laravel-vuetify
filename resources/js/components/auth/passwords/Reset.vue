@@ -5,7 +5,7 @@
                 <v-layout align-center justify-center wrap>
                     <v-flex xs12 sm10 md5>
                         <div class="text-xs-center mb-3">
-                            <h1 class="display-1">Title</h1>
+                            <h1 class="display-1">{{ title }}</h1>
                             <h2 class="subheading mt-2">Reset your password using the form below.</h2>
                         </div>
                         <v-text-field prepend-icon="lock" id="password" name="password" label="Password" type="password"></v-text-field>
@@ -19,7 +19,7 @@
                                 <v-flex xs12>
                                     <v-divider></v-divider>
                                     <div class="mt-4 text-xs-center">
-                                        &copy; Title 2019
+                                        &copy; {{ title }} {{ new Date().getFullYear()}}
                                     </div>
                                 </v-flex>
                             </v-layout>
@@ -34,5 +34,6 @@
 <script>
     export default {
         name: 'Reset',
+        props: ['title']
     }
 </script>

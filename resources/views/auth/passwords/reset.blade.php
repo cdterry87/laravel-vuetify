@@ -3,6 +3,6 @@
 @section('content')
     <form method="POST" action="{{ route('password.update') }}">
         @csrf
-        <reset></reset>
+        <reset :title="'{{ config('app.name') }}'"></reset>
     </form>
 @endsection
