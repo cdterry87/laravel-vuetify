@@ -1937,10 +1937,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Login',
-  props: ['title', 'message'],
-  mounted: function mounted() {
-    console.log('message', this.message);
-  }
+  props: ['title']
 });
 
 /***/ }),

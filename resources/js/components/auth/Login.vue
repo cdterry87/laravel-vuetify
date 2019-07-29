@@ -38,9 +38,6 @@
 <script>
     export default {
         name: 'Login',
-        props: ['title', 'message'],
-        mounted() {
-            console.log('message', this.message)
-        }
+        props: ['title'],
     }
 </script>
