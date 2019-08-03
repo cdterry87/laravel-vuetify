@@ -6,7 +6,7 @@ html, body {
     margin: 0;
 }
 
-body .application, body #welcome {
+body .v-application, body #welcome {
     background: rgb(114,213,196) !important;
     background: -moz-linear-gradient(15deg, rgba(114,213,196,1) 0%, rgba(7,151,223,1) 62%) !important;
     background: -webkit-linear-gradient(15deg, rgba(114,213,196,1) 0%, rgba(7,151,223,1) 62%) !important;

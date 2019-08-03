@@ -1,28 +1,31 @@
 <template>
-    <v-app id="inspire" dark>
+    <v-app>
         <v-content>
             <v-container fluid fill-height>
                 <v-layout align-center justify-center wrap>
                     <v-flex xs12 sm10 md5>
-                        <div class="text-xs-center mb-3">
+                        <div class="text-center mb-5">
                             <h1 class="display-1">{{ title }}</h1>
-                            <h2 class="subheading mt-2">Sign in to do someting great!</h2>
+                            <h2 class="title mt-2">Sign in to do someting great!</h2>
                         </div>
-                        <v-text-field color="white" label="Email" box prepend-inner-icon="mail" id="email" name="email" type="text"></v-text-field>
-                        <v-text-field color="white" label="Password" box prepend-inner-icon="lock" id="password" name="password" type="password"></v-text-field>
+                        <div class="mt-3 mb-5" v-if="errorMessages.length > 0">
+                            <Errors :errors="errorMessages" />
+                        </div>
+                        <v-text-field color="white" label="Email" filled prepend-inner-icon="mdi-mail" id="email" name="email" type="text"></v-text-field>
+                        <v-text-field color="white" label="Password" filled prepend-inner-icon="mdi-lock" id="password" name="password" type="password"></v-text-field>
                         <v-checkbox color="white" id="remember" name="remember" label="Remember Me"></v-checkbox>
-                        <div class="text-xs-center">
-                            <v-btn outline flat type="submit">Login</v-btn>
-                            <v-btn flat href="/register">Register</v-btn>
+                        <div class="text-center">
+                            <v-btn outlined text type="submit">Login</v-btn>
+                            <v-btn text href="/register">Register</v-btn>
                         </div>
-                        <div class="text-xs-center mt-3">
-                            <v-btn flat href="/password/reset">Forgot your password?</v-btn>
+                        <div class="text-center mt-3">
+                            <v-btn text href="/password/reset">Forgot your password?</v-btn>
                         </div>
                         <v-container>
                             <v-layout align-center class="mt-2">
                                 <v-flex xs12>
                                     <v-divider></v-divider>
-                                    <div class="mt-4 text-xs-center">
+                                    <div class="mt-4 text-center">
                                         &copy; {{ title }} {{ new Date().getFullYear()}}
                                     </div>
                                 </v-flex>
@@ -36,8 +39,18 @@
 </template>
 
 <script>
+    import Errors from './../Errors'
+
     export default {
         name: 'Login',
-        props: ['title'],
+        props: ['title', 'errors'],
+        components: {
+            Errors
+        },
+        computed: {
+            errorMessages: function() {
+                return JSON.parse(this.errors)
+            }
+        }
     }
 </script>

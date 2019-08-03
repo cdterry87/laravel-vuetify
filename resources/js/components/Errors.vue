@@ -2,7 +2,7 @@
     <div>
         <v-alert :value="show" type="error">
             <ul>
-                <li v-for="(message, index) in errorMessages" :key="index">{{ message }}</li>
+                <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
             </ul>
         </v-alert>
     </div>
@@ -19,9 +19,6 @@
                 }
                 return false
             },
-            errorMessages: function() {
-                return JSON.parse(this.errors)
-            }
         },
     }
 </script>
