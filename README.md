@@ -4,4 +4,3 @@
 This preset is intended to be a quick start for using Laravel + Vue + Vuetify.
 
 ## Installation
-# Shoplyst
