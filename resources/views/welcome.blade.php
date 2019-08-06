@@ -4,9 +4,9 @@
     <div id="welcome">
         <div class="content">
             <div class="title m-b-md">
-                Title
+                {{ config('app.name', 'Laravel') }}
                 <div class="subtitle m-t-sm">
-                    Some sample subtitle text.
+                    Something interesting about this site!
                 </div>
             </div>
             <div class="links">
