@@ -11,7 +11,7 @@
                         <div class="mt-3 mb-5" v-if="errorMessages.length > 0">
                             <Errors :errors="errorMessages" />
                         </div>
-                        <v-text-field color="white" label="Email" filled prepend-inner-icon="mdi-mail" id="email" name="email" type="text"></v-text-field>
+                        <v-text-field color="white" label="Email" filled prepend-inner-icon="mdi-email" id="email" name="email" type="text"></v-text-field>
                         <v-text-field color="white" label="Password" filled prepend-inner-icon="mdi-lock" id="password" name="password" type="password"></v-text-field>
                         <v-checkbox color="white" id="remember" name="remember" label="Remember Me"></v-checkbox>
                         <div class="text-center">
