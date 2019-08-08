@@ -11,8 +11,8 @@
                         <div class="mt-3 mb-5" v-if="errorMessages.length > 0">
                             <Errors :errors="errorMessages" />
                         </div>
-                        <v-text-field prepend-icon="mdi-lock" id="password" name="password" label="Password" type="password" filled></v-text-field>
-                        <v-text-field prepend-icon="mdi-lock" id="password_confirmation"  name="password_confirmation" filled label="Confirm Password" type="password"></v-text-field>
+                        <v-text-field prepend-icon="mdi-lock" id="password" name="password" label="Password" type="password" filled :rules="[v => !!v || 'Password is required']" required></v-text-field>
+                        <v-text-field prepend-icon="mdi-lock" id="password_confirmation"  name="password_confirmation" filled label="Confirm Password" type="password" :rules="[v => !!v || 'Password Confirmation is required']" required></v-text-field>
                         <div class="text-center">
                             <v-btn outlined text type="submit">Reset Password</v-btn>
                             <v-btn text href="/login">Login</v-btn>
