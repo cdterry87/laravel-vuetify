@@ -11,10 +11,27 @@
 |
 */
 
+// Auth/Logout routes
+Auth::routes();
+Route::get('/api/logout', function () {
+    Auth::logout();
+    return Redirect::to('login');
+});
+
+// Website landing page
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
+// Home page after login
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Authenticated routes
+Route::group(['middleware' => 'auth'], function () {
+    Route::prefix('api')->group(function () {
+        // Application API routes go here
+    });
+
+    // Catch-all route
+    Route::get('/{any}', 'HomeController@index')->where('any', '.*');
+});

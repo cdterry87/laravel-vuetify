@@ -23,6 +23,11 @@ body #welcome {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#72d5c4",endColorstr="#0797df",GradientType=1);
 }
 
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
 .v-alert {
   margin: 0 !important;
 }
