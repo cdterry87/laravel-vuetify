@@ -5,7 +5,7 @@
                 <v-layout align-center justify-center wrap>
                     <v-flex xs12 sm10 md5>
                         <div class="text-center mb-5">
-                            <h1 class="display-1">{{ title }}</h1>
+                            <h1 class="display-1 logo">{{ title }}</h1>
                             <h2 class="title mt-2">Sign in to do someting great!</h2>
                         </div>
                         <div class="mt-3 mb-5" v-if="errorMessages.length > 0">
@@ -18,7 +18,7 @@
                             <v-btn outlined type="submit">Login</v-btn>
                             <v-btn text href="/register">Register</v-btn>
                         </div>
-                        <div class="text-center mt-3">
+                        <div class="text-center mt-5">
                             <v-btn text href="/password/reset">Forgot your password?</v-btn>
                         </div>
                         <v-container>

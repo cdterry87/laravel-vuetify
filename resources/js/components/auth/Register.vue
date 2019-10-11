@@ -5,7 +5,7 @@
                 <v-layout align-center justify-center wrap>
                     <v-flex xs12 sm10 md5>
                         <div class="text-center mb-3">
-                            <h1 class="display-1">{{ title }}</h1>
+                            <h1 class="display-1 logo">{{ title }}</h1>
                             <h2 class="title mt-2">Sign up to do something great!</h2>
                         </div>
                         <div class="mt-3 mb-5" v-if="errorMessages.length > 0">
@@ -17,7 +17,12 @@
                         <v-text-field color="white" label="Confirm Password" filled prepend-inner-icon="mdi-lock" id="password_confirmation" name="password_confirmation" type="password" required></v-text-field>
                         <div class="text-center">
                             <v-btn outlined type="submit">Register</v-btn>
-                            <v-btn text href="/login">Login</v-btn>
+                        </div>
+                        <div class="text-center mt-5">
+                            <v-btn text href="/login">
+                                <v-icon>mdi-arrow-left</v-icon>
+                                <span>Back to Login</span>
+                            </v-btn>
                         </div>
                         <v-container>
                             <v-layout align-center class="mt-2">

@@ -28,6 +28,12 @@ a {
   text-decoration: none !important;
 }
 
+.v-application .logo,
+.logo {
+  font-size: 2rem !important;
+  font-family: "Nunito", sans-serif !important;
+}
+
 .v-alert {
   margin: 0 !important;
 }
