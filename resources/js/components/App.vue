@@ -7,18 +7,42 @@
                 </v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-items>
-                    <v-btn text to="/home" v-if="this.$router.currentRoute.name != 'home'">
-                        <v-icon>mdi-home</v-icon>
-                        <span class="ml-3" v-if="$vuetify.breakpoint.mdAndUp">Home</span>
-                    </v-btn>
-                    <v-btn text to="/account">
-                        <v-icon>mdi-account-circle</v-icon>
-                        <span class="ml-3" v-if="$vuetify.breakpoint.mdAndUp">My Account</span>
+                    <v-btn text class="ml-2" @click="drawer = true">
+                        <v-icon>mdi-menu</v-icon>
+                        <span class="ml-3" v-if="$vuetify.breakpoint.mdAndUp">Menu</span>
                     </v-btn>
                 </v-toolbar-items>
             </v-toolbar>
 
             <v-content>
+                <v-navigation-drawer
+                    light
+                    v-model="drawer"
+                    fixed
+                    clipped
+                    temporary
+                    right
+                >
+                    <v-list flat>
+                        <v-list-item link to="/home">
+                            <v-list-item-content>
+                                <v-list-item-title class="title">{{ title }}</v-list-item-title>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-list>
+                    <v-divider></v-divider>
+                    <v-list flat>
+                        <v-list-item link to="/account">
+                            <v-list-item-icon>
+                                <v-icon>mdi-account-circle</v-icon>
+                            </v-list-item-icon>
+                            <v-list-item-content>
+                                <v-list-item-title>My Account</v-list-item-title>
+                            </v-list-item-content>
+                        </v-list-item>
+                    </v-list>
+                </v-navigation-drawer>
+
                 <router-view></router-view>
 
                 <v-snackbar v-model="snackbar.enabled" :color="snackbar.color" :bottom="true" :timeout="snackbar.timeout">
@@ -42,6 +66,7 @@ export default {
     props: ['title'],
     data() {
         return {
+            drawer: false,
             snackbar: {
                 enabled: false,
                 message: '',
