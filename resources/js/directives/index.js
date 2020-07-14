@@ -1,0 +1,1 @@
+// import './your-directive.js'

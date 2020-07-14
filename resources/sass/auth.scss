@@ -1,0 +1,30 @@
+@import 'variables';
+@import 'base';
+@import 'utilities';
+@import 'typography';
+
+#welcome {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 3.5rem !important;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  font-size: 1.5rem !important;
+  margin-top: 10px;
+}
+
+.links > * {
+  margin: 0 0.5rem;
+}

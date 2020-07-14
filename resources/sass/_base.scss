@@ -1,0 +1,24 @@
+@import '~@mdi/font/css/materialdesignicons.min.css';
+
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
+body .v-application, body #welcome {
+  background: rgb(114,213,196) !important;
+  background: -moz-linear-gradient(15deg, rgba(114,213,196,1) 0%, rgba(7,151,223,1) 62%) !important;
+  background: -webkit-linear-gradient(15deg, rgba(114,213,196,1) 0%, rgba(7,151,223,1) 62%) !important;
+  background: linear-gradient(15deg, rgb(114,213,196) 0%, rgba(7,151,223,1) 62%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#72d5c4",endColorstr="#0797df",GradientType=1);
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.v-application .logo, .logo {
+  font-size: 2rem !important;
+  font-family: 'Nunito', sans-serif !important;
+}
