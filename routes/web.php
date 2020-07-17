@@ -11,10 +11,7 @@ Route::get('/', function () {
 
 // Pre-defined auth routes and logout function
 Auth::routes();
-Route::get('/api/logout', function () {
-    Auth::logout();
-    return Redirect::to('login');
-});
+Route::get('/logout', 'UserController@logout')->name('logout');
 
 // User authenticated home route
 Route::get('/home', 'HomeController@index')->name('home');
