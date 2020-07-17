@@ -51,7 +51,7 @@
         </v-snackbar>
       </v-main>
 
-      <div class="footer caption text-center mt-5 mb-3">{{ title }} &copy; 2019</div>
+      <div class="footer caption text-center mt-5 mb-3">{{ title }} &copy; 2020</div>
     </v-app>
   </div>
 </template>
@@ -73,20 +73,10 @@ export default {
       }
     }
   },
-  created() {
-    Event.$on('success', message => {
-      this.snackbar.message = message
-      this.snackbar.color = 'success'
-      this.snackbar.enabled = true
-    })
-    Event.$on('warning', message => {
-      this.snackbar.message = message
-      this.snackbar.color = 'warning'
-      this.snackbar.enabled = true
-    })
-    Event.$on('error', message => {
-      this.snackbar.message = message
-      this.snackbar.color = 'error'
+  created () {
+    Event.$on('alert', alert => {
+      this.snackbar.message = alert.message
+      this.snackbar.color = alert.color
       this.snackbar.enabled = true
     })
   }

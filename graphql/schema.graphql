@@ -8,8 +8,13 @@ scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date
 scalar DateTimeTz @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\DateTimeTz")
 
 type Query {
-    users: [User!]! @paginate(defaultCount: 10)
-    user(id: ID @eq): User @find
+    me: User! @auth
+}
+
+type Mutation {
+    userUpdate(id: ID!, name: String!, email: String!): User @update
+    userChangePassword(id: ID!, password: String! @hash): User @update
+    userDelete(id: ID!): User @delete
 }
 
 type User {
